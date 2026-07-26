@@ -3,4 +3,4 @@ Plataforma web oficial e interactiva para **Gental Care & Armonización Facial**
 
 **Visita el sitio:** [https://gentalcare.vercel.app](https://gentalcare.vercel.app)
 
-![Gental Care Hero Section](img/preview.png)
+![Vista Completa de Gental Care](img/preview.png)
