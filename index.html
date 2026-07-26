@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gental Care | Dra. Genesis GB - Diseña tu sonrisa, marca tu actitud</title>
+    
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Gental Care - Odontología Especializada y Estética Facial por la Dra. Genesis GB. Diseña tu sonrisa, marca tu actitud en Guayaquil, Ecuador." />
+    <meta name="keywords" content="Gental Care, Dra Genesis GB, odontologia, botox, toxina botulinica, clinica dental, ecuador, guayaquil, diseno de sonrisa, ortodoncia, acido hialuronico" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/LogoFondoBlanco.svg"/>
+    <link rel="shortcut icon" href="img/LogoFondoBlanco.svg" type="image/svg+xml"/>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Fuentes de Google: Plus Jakarta Sans & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Configuración Personalizada de Tailwind -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1e3c5f",
+                        "primary-container": "#375378",
+                        "secondary": "#576061",
+                        "secondary-container": "#d8e1e2",
+                        "tertiary": "#094149",
+                        "tertiary-container": "#285861",
+                        "background": "#f8f9fa",
+                        "surface": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#0f172a",
+                        "on-surface": "#0f172a",
+                        "on-surface-variant": "#334155",
+                        "outline-variant": "#c3c6cf",
+                        "outline": "#74777f"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "md": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "serif": ["\"Outfit\"", "\"Plus Jakarta Sans\"", "sans-serif"],
+                        "sans": ["\"Plus Jakarta Sans\"", "sans-serif"],
+                        "heading": ["\"Outfit\"", "\"Plus Jakarta Sans\"", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-sans overflow-x-hidden selection:bg-primary-container/20 selection:text-primary">
+
+    <!-- Barra de Navegación Premium -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop flex justify-between items-center h-16">
+            <!-- Logo Transparente -->
+            <a href="#hero" class="flex items-center gap-2.5 group">
+                <img src="img/LogoTransparente.svg" alt="Logo Gental Care" class="h-8 md:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"/>
+                <div class="flex flex-col justify-center">
+                    <span class="font-heading font-extrabold text-lg md:text-xl text-primary tracking-tight leading-tight">Gental Care</span>
+                    <span class="text-[10px] font-bold text-tertiary tracking-wider uppercase mt-0">Dra. Genesis GB</span>
+                </div>
+            </a>
+            
+            <!-- Menú Desktop con Tipografía Mejorada -->
+            <div class="hidden md:flex gap-7 items-center">
+                <a class="font-bold text-sm text-primary hover:text-tertiary transition-colors duration-300" href="#hero">Inicio</a>
+                <a class="font-semibold text-sm text-slate-700 hover:text-primary transition-colors duration-300" href="#about">Sobre Mí</a>
+                <a class="font-semibold text-sm text-slate-700 hover:text-primary transition-colors duration-300" href="#services">Servicios</a>
+                <a class="font-semibold text-sm text-slate-700 hover:text-primary transition-colors duration-300" href="#gallery">Resultados</a>
+                <a class="font-semibold text-sm text-slate-700 hover:text-primary transition-colors duration-300" href="#location">Ubicación</a>
+                <a class="ml-2 bg-primary text-white hover:bg-primary-container px-5 py-2 rounded-full font-bold text-xs tracking-wider uppercase shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1.5" href="https://wa.me/593980634893?text=Hola%20Dra.%20Genesis%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta." target="_blank">
+                    <span class="material-symbols-outlined text-sm">chat</span>
+                    Reservar Cita
+                </a>
+            </div>
+
+            <!-- Botón Menú Móvil -->
+            <button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Abrir Menú">
+                <span class="material-symbols-outlined text-2.5xl font-bold" id="menu-icon">menu</span>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div class="hidden md:hidden absolute top-16 left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300" id="mobile-menu">
+            <div class="flex flex-col p-6 gap-4">
+                <a class="font-bold text-primary text-lg py-2 border-b border-slate-100" href="#hero" onclick="toggleMenu()">Inicio</a>
+                <a class="font-bold text-slate-700 text-lg py-2 border-b border-slate-100" href="#about" onclick="toggleMenu()">Sobre Mí</a>
+                <a class="font-bold text-slate-700 text-lg py-2 border-b border-slate-100" href="#services" onclick="toggleMenu()">Servicios</a>
+                <a class="font-bold text-slate-700 text-lg py-2 border-b border-slate-100" href="#gallery" onclick="toggleMenu()">Resultados</a>
+                <a class="font-bold text-slate-700 text-lg py-2 border-b border-slate-100" href="#location" onclick="toggleMenu()">Ubicación</a>
+                <a class="mt-2 w-full bg-primary text-white text-center py-3 rounded-full font-bold text-base shadow flex justify-center items-center gap-2" href="https://wa.me/593980634893?text=Hola%20Dra.%20Genesis%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta." target="_blank">
+                    <span class="material-symbols-outlined">chat</span>
+                    Escríbenos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sección Hero (Presentación Principal - Fotografía Real a Altura Completa) -->
+    <header class="relative min-h-screen flex items-center pt-16 overflow-hidden bg-slate-50" id="hero">
+        <!-- Foto de la Doctora en Consulta (Abarca de borde superior a inferior del Hero) -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-6/12 h-full z-0 overflow-hidden">
+            <!-- Imagen real que cubre el 100% de la altura de la sección enfocando a la doctora en la parte superior -->
+            <img src="img/Portada.png" alt="Dra. Genesis GB en consulta clínica" class="w-full h-full object-cover object-top opacity-25 lg:opacity-100 transition-opacity duration-300"/>
+            
+            <!-- Difuminado progresivo hacia el fondo claro del lado izquierdo en desktop -->
+            <div class="hidden lg:block absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent z-10 pointer-events-none"></div>
+
+            <!-- Difuminado superior sutil para el navbar -->
+            <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-slate-50/90 via-slate-50/40 to-transparent z-10 pointer-events-none"></div>
+        </div>
+
+        <!-- Contenido de Texto a la Izquierda -->
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop w-full relative z-10 py-12 lg:py-0">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-6 reveal">
+                    <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/95 backdrop-blur-md text-primary border border-primary/20 font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full mb-6 shadow-sm">
+                        <span class="material-symbols-outlined text-base">verified</span> Gental Care &bull; Dra. Genesis GB
+                    </span>
+                    
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.15] tracking-tight">
+                        Diseña tu sonrisa, <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary via-primary-container to-primary">marca tu actitud</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl font-medium text-slate-700 mb-8 max-w-xl leading-relaxed">
+                        Experimenta un enfoque exclusivo y personalizado en el cuidado de tu salud oral y estética facial en <strong class="text-primary font-bold">Gental Care</strong> con la <strong class="text-primary font-bold">Dra. Genesis GB</strong>.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a class="bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-full font-bold text-base shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-3 hover:-translate-y-0.5" href="https://wa.me/593980634893?text=Hola%20Dra.%20Genesis%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta." target="_blank">
+                            <span class="material-symbols-outlined font-bold" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            Reservar Consulta
+                        </a>
+                        <a class="border-2 border-primary text-primary hover:bg-primary/5 px-8 py-4 rounded-full font-bold text-base transition-all duration-300" href="#services">
+                            Nuestros Tratamientos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Sobre Mí -->
+    <section class="py-section-gap bg-surface-container-lowest" id="about">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Retrato -->
+                <div class="relative reveal">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/5] max-w-md mx-auto border-4 border-white">
+                        <img alt="Retrato de la Dra. Genesis GB" class="w-full h-full object-cover object-top" src="img/Doctora.jpg"/>
+                    </div>
+                </div>
+
+                <!-- Detalles de la Especialista -->
+                <div class="reveal">
+                    <h3 class="font-bold text-xs tracking-widest text-tertiary uppercase mb-2">Gental Care &bull; La Especialista</h3>
+                    <h2 class="font-heading text-3xl md:text-5xl font-extrabold text-primary mb-4">Dra. Genesis GB</h2>
+                    <div class="w-20 h-1.5 bg-tertiary rounded-full mb-6"></div>
+                    
+                    <p class="text-lg text-slate-800 mb-4 leading-relaxed font-medium">
+                        Con más de una década de dedicación al cuidado clínico, la <strong class="text-primary font-bold">Dra. Genesis GB</strong> lidera <strong class="text-primary font-bold">Gental Care</strong> con una visión de <strong>"Cuidado Refinado"</strong>. Se especializa en fusionar la excelencia odontológica con la estética facial para diseñar sonrisas saludables y rostros armoniosos.
+                    </p>
+                    <p class="text-base text-slate-700 mb-6 leading-relaxed">
+                        Su compromiso con el paciente va más allá del sillón dental. En <strong class="text-primary font-semibold">Gental Care</strong> creemos que cada persona merece una experiencia personalizada y sin estrés en un entorno privado y confortable que evoque paz y tranquilidad.
+                    </p>
+
+                    <!-- Lista de Credenciales -->
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-base font-bold text-slate-800">
+                            <span class="material-symbols-outlined text-tertiary text-xl font-bold" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Certificación Avanzada en Armonización Facial
+                        </li>
+                        <li class="flex items-center gap-3 text-base font-bold text-slate-800">
+                            <span class="material-symbols-outlined text-tertiary text-xl font-bold" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Experta en Rehabilitación Oral Compleja
+                        </li>
+                        <li class="flex items-center gap-3 text-base font-bold text-slate-800">
+                            <span class="material-symbols-outlined text-tertiary text-xl font-bold" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Atención Premium y Diagnóstico Computarizado
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="py-section-gap bg-surface-container-low" id="services">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+            <!-- Título de Sección -->
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h3 class="font-bold text-xs tracking-widest text-tertiary uppercase mb-2">Gental Care &bull; Servicios</h3>
+                <h2 class="font-heading text-3xl md:text-5xl font-extrabold text-primary mb-4">Tratamientos y Soluciones Estéticas</h2>
+                <p class="text-lg md:text-xl font-medium text-slate-700 leading-relaxed">Procedimientos detallados y personalizados de odontología y armonización facial en Gental Care para devolver la funcionalidad y realzar tu belleza.</p>
+            </div>
+
+            <!-- Grid de Servicios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                
+                <!-- Ortodoncia Avanzada -->
+                <div class="bg-white p-8 rounded-2xl border-t-4 border-tertiary shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">dentistry</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mb-3">Ortodoncia</h3>
+                    <p class="text-base text-slate-700 leading-relaxed font-medium">
+                        Alineación dental mediante sistemas avanzados, incluyendo alineadores transparentes y brackets tradicionales para una sonrisa perfecta y funcional.
+                    </p>
+                </div>
+
+                <!-- Aplicación de Botox / Toxina Botulínica -->
+                <div class="bg-white p-8 rounded-2xl border-t-4 border-tertiary shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">face</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mb-3">Toxina Botulínica (Botox)</h3>
+                    <p class="text-base text-slate-700 leading-relaxed font-medium">
+                        Aplicación de toxina botulínica en arrugas dinámicas para un rejuvenecimiento facial integral. Suaviza líneas de expresión en frente, entrecejo y patas de gallo manteniendo la naturalidad de tu rostro.
+                    </p>
+                </div>
+
+                <!-- Prótesis Dentales -->
+                <div class="bg-white p-8 rounded-2xl border-t-4 border-tertiary shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">shield</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mb-3">Prótesis Dentales</h3>
+                    <p class="text-base text-slate-700 leading-relaxed font-medium">
+                        Restauraciones protésicas fijas y removibles fabricadas con materiales biocompatibles de la más alta calidad, diseñadas para devolver la fuerza de tu mordida.
+                    </p>
+                </div>
+
+                <!-- Incrustaciones de Resina -->
+                <div class="bg-white p-8 rounded-2xl border-t-4 border-tertiary shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">brush</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mb-3">Incrustaciones de Resina</h3>
+                    <p class="text-base text-slate-700 leading-relaxed font-medium">
+                        Restauraciones estéticas diseñadas a la medida del diente dañado. Reemplazan la estructura perdida manteniendo al máximo el tejido dental sano.
+                    </p>
+                </div>
+
+                <!-- Prótesis de Acker -->
+                <div class="bg-white p-8 rounded-2xl border-t-4 border-tertiary shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">health_metrics</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mb-3">Prótesis de Acker</h3>
+                    <p class="text-base text-slate-700 leading-relaxed font-medium">
+                        Solución protésica parcial removible de precisión, diseñada meticulosamente para rellenar espacios edéntulos ofreciendo alta comodidad y excelente retención.
+                    </p>
+                </div>
+
+                <!-- Blanqueamiento Dental -->
+                <div class="bg-white p-8 rounded-2xl border-t-4 border-tertiary shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl font-bold">flare</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mb-3">Blanqueamiento Dental</h3>
+                    <p class="text-base text-slate-700 leading-relaxed font-medium">
+                        Sistema clínico avanzado de aclarado dental para eliminar manchas y restaurar la vitalidad del esmalte de forma rápida y completamente segura.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Caja de Llamado a la Acción (CTA) para Consulta -->
+            <div class="mt-12 bg-primary text-white rounded-2xl p-8 md:p-12 shadow-lg flex flex-col md:flex-row justify-between items-center gap-8 reveal">
+                <div class="max-w-xl text-center md:text-left">
+                    <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mb-3">¿Listo para transformar tu sonrisa y actitud?</h3>
+                    <p class="text-base sm:text-lg font-medium opacity-90">Agenda una consulta inicial de evaluación en <strong class="underline">Gental Care</strong> con la <strong class="underline">Dra. Genesis GB</strong>. Analizaremos tu caso con tecnología de vanguardia.</p>
+                </div>
+                <a class="w-full md:w-auto bg-white text-primary hover:bg-slate-100 font-bold text-base px-8 py-4 rounded-full shadow-lg text-center transition-all duration-300 whitespace-nowrap" href="https://wa.me/593980634893?text=Hola%20Dra.%20Genesis%2C%20me%20gustar%C3%ADa%20solicitar%20un%20diagn%C3%B3stico%20inicial." target="_blank">
+                    Agendar Diagnóstico
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Galería de Casos Clínicos -->
+    <section class="py-section-gap bg-surface-container-lowest" id="gallery">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop reveal">
+            <!-- Título de Sección -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="font-bold text-xs tracking-widest text-tertiary uppercase mb-2">Gental Care &bull; Casos Reales</h3>
+                <h2 class="font-heading text-3xl md:text-5xl font-extrabold text-primary mb-4">Casos Clínicos y Resultados</h2>
+                <p class="text-lg md:text-xl font-medium text-slate-700 leading-relaxed">Resultados reales de nuestros pacientes en Gental Care antes y después del tratamiento por la Dra. Genesis GB.</p>
+            </div>
+
+            <!-- Desktop: Grid de 3 columnas (Caso 1 y 2 en tamaño vertical completo; Caso 3 recortado sutilmente al mismo tamaño) -->
+            <div class="hidden lg:grid grid-cols-3 gap-6 items-start">
+                <img alt="Caso 2: Armonización Facial" class="w-full aspect-[3/4] object-cover rounded-xl shadow-md hover:shadow-xl hover:scale-[1.01] transition-all duration-300" src="img/Caso2.jpg"/>
+                <img alt="Caso 1: Diseño de Sonrisa" class="w-full aspect-[3/4] object-cover rounded-xl shadow-md hover:shadow-xl hover:scale-[1.01] transition-all duration-300" src="img/Caso1.jpg"/>
+                <img alt="Caso 3: Rehabilitación Protésica" class="w-full aspect-[3/4] object-cover rounded-xl shadow-md hover:shadow-xl hover:scale-[1.01] transition-all duration-300" src="img/Caso3.jpg"/>
+            </div>
+
+            <!-- Mobile & Tablet: Carrusel 3D Cover Flow Vertical Adaptable (Sin achicar imágenes) -->
+            <div class="block lg:hidden relative w-full overflow-hidden py-6 px-4" id="carousel-section">
+                <!-- Contenedor 3D / Cover Flow Responsive Vertical -->
+                <div class="relative w-full max-w-sm sm:max-w-lg md:max-w-xl mx-auto flex items-center justify-center min-h-[380px] sm:min-h-[460px] md:min-h-[560px]" id="coverflow-container">
+                    
+                    <!-- Slide 0: Caso 1 -->
+                    <div class="coverflow-slide absolute transition-all duration-500 ease-out cursor-pointer flex items-center justify-center" data-index="0">
+                        <img alt="Caso 1: Diseño de Sonrisa" class="w-[70vw] max-w-[280px] sm:max-w-[340px] md:max-w-[420px] aspect-[3/4] object-cover rounded-xl shadow-2xl" src="img/Caso1.jpg"/>
+                    </div>
+
+                    <!-- Slide 1: Caso 2 -->
+                    <div class="coverflow-slide absolute transition-all duration-500 ease-out cursor-pointer flex items-center justify-center" data-index="1">
+                        <img alt="Caso 2: Armonización Facial" class="w-[70vw] max-w-[280px] sm:max-w-[340px] md:max-w-[420px] aspect-[3/4] object-cover rounded-xl shadow-2xl" src="img/Caso2.jpg"/>
+                    </div>
+
+                    <!-- Slide 2: Caso 3 -->
+                    <div class="coverflow-slide absolute transition-all duration-500 ease-out cursor-pointer flex items-center justify-center" data-index="2">
+                        <img alt="Caso 3: Rehabilitación Protésica" class="w-[70vw] max-w-[280px] sm:max-w-[340px] md:max-w-[420px] aspect-[3/4] object-cover rounded-xl shadow-2xl" src="img/Caso3.jpg"/>
+                    </div>
+
+                    <!-- Flechas de Control (Transparentes con icono azul primario) -->
+                    <button class="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 bg-transparent text-primary hover:scale-125 transition-transform active:scale-95 z-40 p-1 focus:outline-none" id="carousel-prev" aria-label="Anterior">
+                        <span class="material-symbols-outlined text-3xl sm:text-4xl md:text-5xl font-bold">chevron_left</span>
+                    </button>
+                    <button class="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 bg-transparent text-primary hover:scale-125 transition-transform active:scale-95 z-40 p-1 focus:outline-none" id="carousel-next" aria-label="Siguiente">
+                        <span class="material-symbols-outlined text-3xl sm:text-4xl md:text-5xl font-bold">chevron_right</span>
+                    </button>
+                </div>
+
+                <!-- Indicadores (Dots) -->
+                <div class="flex justify-center gap-2 mt-6" id="carousel-dots">
+                    <button class="w-3 h-3 rounded-full bg-primary transition-all duration-300" data-index="0" aria-label="Caso 1"></button>
+                    <button class="w-3 h-3 rounded-full bg-outline-variant hover:bg-primary transition-all duration-300" data-index="1" aria-label="Caso 2"></button>
+                    <button class="w-3 h-3 rounded-full bg-outline-variant hover:bg-primary transition-all duration-300" data-index="2" aria-label="Caso 3"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación y Contacto -->
+    <section class="py-section-gap bg-surface-container-low" id="location">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+            <div class="flex flex-col lg:flex-row gap-12 items-stretch bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200 reveal">
+                <!-- Información -->
+                <div class="lg:w-5/12 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-xs tracking-widest text-tertiary uppercase mb-2">Gental Care &bull; Ubicación</h3>
+                        <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-primary mb-6">Dónde Encontrarnos</h2>
+                        <p class="text-base md:text-lg text-slate-700 mb-8 leading-relaxed font-medium">
+                            Visítanos en nuestro centro odontológico <strong class="text-primary font-bold">Gental Care</strong>. Estamos convenientemente ubicados con accesibilidad vehicular y atención personalizada.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Dirección -->
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-tertiary bg-tertiary-container/10 p-2.5 rounded-xl font-bold shrink-0">location_on</span>
+                            <div>
+                                <h4 class="font-heading text-base font-bold text-primary">Dirección Principal</h4>
+                                <p class="text-sm font-medium text-slate-700 mt-1">Alborada 4ta Etapa Mz FS Villa 1, junto a Farmacia del Norte. Guayaquil, Ecuador</p>
+                                <a href="https://maps.app.goo.gl/wQTedfHvUP2xF2Q4A" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-tertiary hover:underline mt-2">
+                                    <span class="material-symbols-outlined text-sm">map</span>
+                                    Abrir en Google Maps (2°08'19.8"S 79°53'33.7"W)
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Horarios -->
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-tertiary bg-tertiary-container/10 p-2.5 rounded-xl font-bold shrink-0">schedule</span>
+                            <div>
+                                <h4 class="font-heading text-base font-bold text-primary">Horario de Atención</h4>
+                                <div class="text-sm font-medium text-slate-700 mt-1 space-y-1">
+                                    <p><span class="font-semibold text-slate-900">Lunes a Viernes:</span> 9:30 AM - 7:00 PM</p>
+                                    <p><span class="font-semibold text-slate-900">Sábados:</span> 10:00 AM - 4:00 PM</p>
+                                    <p><span class="font-semibold text-red-600">Domingos:</span> Cerrado</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa Gráfico Interactivo a Color (Alineado en altura en desktop y adaptado en móvil) -->
+                <a href="https://maps.app.goo.gl/wQTedfHvUP2xF2Q4A" target="_blank" title="Abrir ubicación en Google Maps" class="w-full lg:w-7/12 h-[300px] sm:h-[350px] lg:h-auto rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative group block shrink-0">
+                    <iframe src="https://maps.google.com/maps?q=-2.138833,-79.892694&hl=es&z=17&output=embed" class="w-full h-full border-0 pointer-events-none block" loading="lazy" aria-label="Mapa de ubicación Gental Care"></iframe>
+
+                    <div class="absolute bottom-4 right-4 bg-primary text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 group-hover:bg-tertiary transition-colors">
+                        <span class="material-symbols-outlined text-base">open_in_new</span>
+                        Ver en Google Maps
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer de la Página -->
+    <footer class="bg-surface-container border-t border-slate-200 py-12">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+            <!-- Marca en el Footer con Logo Transparente -->
+            <div class="flex items-center gap-3">
+                <img src="img/LogoTransparente.svg" alt="Logo Gental Care" class="h-10 w-auto object-contain"/>
+                <div class="flex flex-col justify-center">
+                    <span class="font-heading font-extrabold text-xl text-primary leading-tight">Gental Care</span>
+                    <span class="text-[11px] font-bold text-tertiary tracking-wider uppercase mt-0">Dra. Genesis GB</span>
+                </div>
+            </div>
+            <!-- Enlaces Rápidos -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="font-bold text-xs tracking-wider uppercase text-slate-700 hover:text-primary transition-colors" href="#hero">Inicio</a>
+                <a class="font-bold text-xs tracking-wider uppercase text-slate-700 hover:text-primary transition-colors" href="#about">Sobre Mí</a>
+                <a class="font-bold text-xs tracking-wider uppercase text-slate-700 hover:text-primary transition-colors" href="#services">Servicios</a>
+                <a class="font-bold text-xs tracking-wider uppercase text-slate-700 hover:text-primary transition-colors" href="#gallery">Resultados</a>
+                <a class="font-bold text-xs tracking-wider uppercase text-slate-700 hover:text-primary transition-colors" href="#location">Ubicación</a>
+            </div>
+            <!-- Slogan, Derechos Reservados y Crédito de Desarrollador -->
+            <div class="text-center md:text-right max-w-sm">
+                <p class="text-xs font-bold text-tertiary uppercase tracking-wider mb-1">"Diseña tu sonrisa, marca tu actitud"</p>
+                <p class="text-xs text-slate-600 font-medium leading-normal mb-1">
+                    © 2026 Gental Care &bull; Dra. Genesis GB.<br/>
+                    Todos los derechos reservados.
+                </p>
+                <p class="text-xs text-slate-500 font-medium">
+                    Sitio web diseñado y desarrollado por 
+                    <a href="https://alexanderalfonso.vercel.app" target="_blank" rel="noopener noreferrer" class="font-bold text-primary hover:text-tertiary hover:underline transition-colors">Alexander Alfonso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript Principal -->
+    <script src="script.js"></script>
+</body>
+</html>

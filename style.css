@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap');
+
+/* Estilos Globales y Tipografía */
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #1e293b;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+    letter-spacing: -0.02em;
+}
+
+
+/* Scrollbar Personalizada Premium */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+::-webkit-scrollbar-thumb {
+    background: #c3c6cf;
+    border-radius: 9999px;
+    border: 2px solid #f8f9fa;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #74777f;
+}
+
+/* Fuentes de Iconos */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    line-height: 1;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+/* Efecto Sticky de la Barra de Navegación */
+nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    border-bottom-color: rgba(195, 198, 207, 0.2);
+}
+
+/* Efectos de Reveal en el Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Contenedor del Slider Antes / Después */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y; /* Permite scroll vertical en móvil sin interferir con el arrastre horizontal */
+}
+
+/* Wrapper de la imagen "Después" que se recorta */
+.after-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    pointer-events: none; /* Deja que los clics pasen al contenedor principal del slider */
+}
+
+/* Ajustes de imagen en el slider */
+.slider-container img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Controlador Central del Slider */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px; /* Ancho extendido para facilitar pulsaciones táctiles */
+    transform: translateX(-50%);
+    pointer-events: auto; /* Permite interactuar directamente */
+    z-index: 30;
+}
+
+.slider-handle::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+}
+
+.slider-handle div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 40;
+}
+
+/* Transiciones para Efectos Hover de Botones y Tarjetas */
+.hover-lift {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(30, 60, 95, 0.08);
+}
+
+/* Animación de Salto Más Lento para el Pin de Ubicación */
+@keyframes bounceSlow {
+    0%, 100% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(-12px);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+.animate-bounce-slow {
+    animation: bounceSlow 2.4s infinite;
+}
+
