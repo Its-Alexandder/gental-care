@@ -16,6 +16,9 @@ body {
     html {
         zoom: 0.9;
     }
+    #hero {
+        min-height: calc(100vh / 0.9);
+    }
 }
 
 
